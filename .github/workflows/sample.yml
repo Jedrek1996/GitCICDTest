@@ -11,4 +11,10 @@ jobs:
       - name: Check out code 
         uses: action/checkout@v2
       - name: Setup go
-        uses: action/setup-go@v2
+        uses: action/setup-go@3.5.8
+        with:
+          gp-version: 1.19.3
+      - name: go installed
+        run: |
+          go version
+      
