@@ -7,7 +7,7 @@ import (
 func TestAdd(t *testing.T) {
 	result := Add(1, 2)
 
-	if result != 3 {
+	if result != 33 {
 		t.Errorf("Result was incorrect, got: %d, want: %d.", result, 3)
 	}
 
