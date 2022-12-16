@@ -31,3 +31,15 @@ jobs:
           Job -           `${{ github.job }}`
           status -        `${{ job.status }}`
         assignees: Jedrek1996
+        
+        
+    - name: Validate the Go Codes
+      uses: goreleaser/goreleaser-action@v2.6.1
+      with:
+        args: check
+    - name: Release the Go Codes
+      uses: goreleaser/goreleaser-action@v2.6.1
+      with:
+        args: release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
