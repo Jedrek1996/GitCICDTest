@@ -18,17 +18,11 @@ jobs:
         uses: actions/setup-go@v3.5.0
         with:
           gp-version: 1.19.3
-          
-      - name: go installed
-        run: |
-          go version
-          go test -v
                   
       - name: Install dependencies for GO
         run: |
           go get github.com/franela/goblin
-          go get gotest.tools/gotestsum@latest
-          go test -v
+          go install gotest.tools/gotestsum@latest
           go test -v | gotestsum --junitfile report.xml
           ls 
           
