@@ -15,7 +15,7 @@ jobs:
         run: echo Hello There!
         
       - name: Setup go
-        uses: actions/setup-go@3.5.0
+        uses: actions/setup-go@v3.5.0
         with:
           gp-version: 1.19.3
           
